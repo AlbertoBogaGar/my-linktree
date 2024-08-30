@@ -1,54 +1,37 @@
-# Astro Starter Kit: Basics
+# Linktree con Astro
 
-```sh
-npm create astro@latest -- --template basics
+Este proyecto es una implementación personalizada de un Linktree utilizando la plantilla por defecto de [Astro](https://astro.build/). A continuación, se detalla el proceso que he seguido para crear y desplegar este proyecto.
+
+## Pasos para Crear el Proyecto
+
+### 1. Crear el Proyecto con Astro
+
+Primero, abrí la terminal y ejecuté el siguiente comando para crear un nuevo proyecto con Astro:
+
+```bash
+npm create astro@latest
+````
+Seguí las instrucciones en la terminal para configurar el proyecto
+Es importante que escojas la opcion de "Include sample files".
+
+### 2 . Modifica la estructura del proyecto
+
+Una vez creado el proyecto, realicé algunos cambios en la estructura del archivo card.astro:
+
+- Creé un array con los enlaces de los proyectos que quería incluir en mi Linktree.
+- Utilicé la función map() para recorrer este array y generar automáticamente los elementos HTML correspondientes.
+
+### 3 . Personaliza los estilos que necesites 
+- Cambia el title en el layout
+- Modifica el fondo y otros elementos de estilo que necesites
+
+### 4 . Construye el proyecto 
+```bash
+npm run build
 ```
+Con  este comando se creará una carpeta llamada dist. 
+ ### 5 . Despliega el proyecto 
+ Puedes desplegar el proyeccto donde quieras, yo recomiendo Netlify ya que arrastrando la carpeta dist ya puedes desplegar. 
+ 
+https://app.netlify.com/drop
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
