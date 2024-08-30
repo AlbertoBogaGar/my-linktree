@@ -2,6 +2,12 @@
 import Linkedin from "./icons/Linkedin.astro";
 ---
 
-<div class="mb-5 w-sm flex justify-center">
+<a
+{...Astro.props}
+target="_blank"
+rel="noopener noreferrer"
+role="link">
+  <div class="mb-5 w-sm flex justify-center">
     <Linkedin />
-</div>
+  </div>
+</a>
