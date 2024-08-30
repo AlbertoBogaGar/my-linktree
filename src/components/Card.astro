@@ -1,0 +1,79 @@
+---
+const PROJECTS = [
+  {
+    title: "Amaya Corbacho",
+    description: "Página web sobre la artista Amaya Corbacho.",
+    href: "https://amayacorbacho.com/",
+    image: "/mockup-amaya.webp",
+  },
+  {
+	title:"Pueyo Palacios",
+	description:"Página web del entrenador personal Pueyo Palacios.",
+	href:"https://pueyopalacios.com/",
+	image:"pueyoP.webp",
+  }
+
+];
+---
+
+{
+	PROJECTS.map(({ title, description, image, href }) => (
+		<li class="link-card flex flex-col gap-y-16">
+      <a href={href}>
+        <h2>
+          {title}
+          <span>&rarr;</span>
+        </h2>
+        <p>{description}</p>
+      </a>
+</li>
+    ))
+  }
+<style>
+  .link-card {
+    list-style: none;
+    width: 100%;
+    display: flex;
+	flex-direction: block;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    background-color: #23262d;
+    background-size: 400%;
+    border-radius: 7px;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	width: 40%;
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  img {
+    width: 40%;
+	display: inline;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
+  }
+</style>
